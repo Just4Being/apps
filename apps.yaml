@@ -11,7 +11,7 @@ spec:
     path: helm
     repoURL: https://github.com/kubernetes/apps.git
     targetRevision: HEAD
-  destionation:
+  destination:
     namespace: nginx
     server: https://kubernetes.default.svc
   syncPolicy:
