@@ -3,13 +3,11 @@ kind: Application
 metadata:
   name: nginx
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
     path: helm
-    repoURL: https://github.com/kubernetes/apps.git
+    repoURL: https://github.com/Just4Being/apps.git
     targetRevision: HEAD
   destination:
     namespace: nginx
@@ -18,3 +16,4 @@ spec:
     automated:
       selfHeal: true
       prune: true
+      allowEmpty: true
